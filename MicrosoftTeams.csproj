@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+	  <PackageVersion>1.0.1</PackageVersion>
+	  <PackageId>Somogyi.SkypeToken</PackageId>
+	  <Version>1.0.1</Version>
+	  <Authors>Somogyi.SkypeToken</Authors>
+	  <Product>Somogyi.SkypeToken</Product>
+	  <Description>A service to obtain skype token for MS teams</Description>
+	  <Copyright></Copyright>
+	  <PackageLicenseExpression>WTFPL</PackageLicenseExpression>
+	  <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>
