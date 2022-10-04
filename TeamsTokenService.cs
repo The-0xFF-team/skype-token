@@ -72,7 +72,7 @@ namespace MicrosoftTeams
             using var client = new HttpClient(handler);
 
             client.DefaultRequestHeaders.Add("User-Agent",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0");
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0");
 
 
             var response = await GetNecessaryTokens(client);
@@ -183,26 +183,5 @@ namespace MicrosoftTeams
             _password = password;
             return this;
         }
-
-        public static ITokenService SetTenant(string tenant)
-        {
-            return new TeamsTokenService(tenant);
-        }
     }
-
-    public interface ITokenService
-    {
-        IUsername SetUsername(string username);
-    }
-
-    public interface IPassword
-    {
-        Task<string> GetToken();
-    }
-
-    public interface IUsername
-    {
-        IPassword SetPassword(string password);
-    }
-
 }
